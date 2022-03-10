@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var name = "logo"
+    @State var imageName = "logo"
     var body: some View {
         VStack(spacing:10){
             Group {
@@ -16,7 +16,7 @@ struct ContentView: View {
                     Text("ما هو المسار المفضل لديك")
                         .font(.largeTitle)
                         .bold()
-                    Image(name)
+                    Image(imageName)
                         .resizable()
                         .scaledToFit()
                 }
@@ -30,24 +30,30 @@ struct ContentView: View {
                         .background(.black)// bonus change it to cyan
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to iOS
-
+                        .onSubmit {
+                            imageName = "apple"
+                        }
                     Text("Gamedev")
                         .frame(width: 250, height: 60)
                         .background(.black)// bonus change it to red
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to Gamedev
-
+                        .onSubmit {
+                            imageName = "Gamedev"
                     Text("Web")
                         .frame(width: 250, height: 60)
                         .background(.black)// bonus change it to blue
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to web
-                        
+                        .onSubmit {
+                            imageName = "Web"
                     Text("Android")
                         .frame(width: 250, height: 60)
                         .background(.black)// bonus change it to green
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to Android
+                        .onSubmit {
+                            imageName = "android"
                 }
             
             }

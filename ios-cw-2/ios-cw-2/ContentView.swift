@@ -30,7 +30,7 @@ struct ContentView: View {
                         .background(.black)// bonus change it to cyan
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to iOS
-                        .onSubmit {
+                        .onTapGesture {
                             imageName = "apple"
                         }
                     Text("Gamedev")
@@ -38,33 +38,37 @@ struct ContentView: View {
                         .background(.black)// bonus change it to red
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to Gamedev
-                        .onSubmit {
+                        .onTapGesture {
                             imageName = "Gamedev"
+                        }
                     Text("Web")
                         .frame(width: 250, height: 60)
                         .background(.black)// bonus change it to blue
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to web
-                        .onSubmit {
+                        .onTapGesture {
+                            imageName = "web"
+                        }
                             imageName = "Web"
                     Text("Android")
                         .frame(width: 250, height: 60)
                         .background(.black)// bonus change it to green
                         .clipShape(RoundedRectangle(cornerRadius: 35))
                         // cahnge name to Android
-                        .onSubmit {
+                        .onTapGesture {
                             imageName = "android"
-                }
-            
+                        }
+                
             }
             .font(.title)
             .foregroundColor(.white)
         }
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
+}
+        struct ContentView_Previews: PreviewProvider {
+            static var previews: some View {
         ContentView()
     }
 }
+

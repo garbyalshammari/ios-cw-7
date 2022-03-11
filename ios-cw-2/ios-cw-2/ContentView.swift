@@ -49,7 +49,6 @@ struct ContentView: View {
                         .onTapGesture {
                             imageName = "web"
                         }
-                            imageName = "Web"
                     Text("Android")
                         .frame(width: 250, height: 60)
                         .background(.black)// bonus change it to green
